@@ -1,20 +1,20 @@
 #include <cstddef>
 #include "singleton.h" 
 
-Singleton* Singleton::mySingleton = NULL;
+Singleton* Singleton::instance_singleton = NULL;
 
 Singleton::Singleton() : value(0)
 {	
 }
 
-Singleton* Singleton::initialise()
+Singleton* Singleton::instance()
 {
-   if(!mySingleton)
+   if(!instance_singleton)
    {
-      mySingleton = new Singleton();
+      instance_singleton = new Singleton();
    }
 		
-   return mySingleton;	
+   return instance_singleton;	
 }
 
 int Singleton::additionValue(int iVal)

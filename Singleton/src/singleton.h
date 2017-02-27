@@ -4,14 +4,14 @@
 class Singleton
 {
    public:
-     static Singleton * initialise();
+     static Singleton * instance();
      int additionValue(int iVal);
      int getValue();
      void setValue(int iVal);
 		
    private:
      Singleton();
-     static Singleton * mySingleton;	
+     static Singleton * instance_singleton;	
      int value;    	
 
 };
